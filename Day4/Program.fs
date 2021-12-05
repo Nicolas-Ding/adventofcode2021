@@ -39,15 +39,15 @@ let populateDict bingoBoard (dict:Dictionary<int, int*int>) =
         line
         |> Array.iteri (fun j (v,b) -> dict.Add(v, (i,j))))
     
-let bingoScore bingoBoard numbersList = 
-    let dict = Dictionary<int, int*int>();
-    populateDict bingoBoard dict;
-    numbersList
-    |> Seq.iter (fun n -> 
-        let (x,y) = dict[n];
-        let (a,b) = bingoBoard[x][y];
-        bingoBoard[x][y] <- a, true;
-        if isBingo bingoBoard then return 1)
+//let bingoScore bingoBoard numbersList = 
+//    let dict = Dictionary<int, int*int>();
+//    populateDict bingoBoard dict;
+//    numbersList
+//    |> Seq.iter (fun n -> 
+//        let (x,y) = dict[n];
+//        let (a,b) = bingoBoard[x][y];
+//        bingoBoard[x][y] <- a, true;
+//        if isBingo bingoBoard then return 1)
 
 
 
