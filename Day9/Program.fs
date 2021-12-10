@@ -71,7 +71,7 @@ let part2 =
     // as gridVisited is not updated soon enough in the Seq.map above. 
     // This lead to 1 sized basins being created. Hopefully the data is well made and we can just filter those out
     // 🤮🤮
-    // Proper way would be to use a separate C# Dictionary (and not Map) to do this but I don't have a lot of time today to work on this
+    // Proper way would be to use a **separate** C# Dictionary or a separate array to do this but I don't have a lot of time today to work on this
     |> Seq.filter (fun i -> i > 1) 
     |> Seq.sortDescending
     |> Seq.take 3
